@@ -1,6 +1,6 @@
 ---
 title: "Mailgun"
-title_tag: "Module Mailgun | Package Mailgun"
+title_tag: "mailgun.Mailgun"
 meta_desc: "A Pulumi package for creating and managing Mailgun resources."
 menu:
     reference:
@@ -15,8 +15,14 @@ A Pulumi package for creating and managing Mailgun resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
+    <li><a href="domaincredential" title="DomainCredential"><span class="symbol resource"></span>DomainCredential</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,26 +32,8 @@ A Pulumi package for creating and managing Mailgun resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/wgebis/terraform-provider-mailgun).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Mailgun/Pulumi.Mailgun.html" title="Pulumi.Mailgun">Pulumi.Mailgun</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun/?tab=doc#" title="mailgun">mailgun</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/mailgun/#" title="@pulumi/mailgun">@pulumi/mailgun</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_mailgun" title="pulumi_mailgun">pulumi_mailgun</a></dd>
-
+	<dd>3.1.0</dd>
 </dl>
 

@@ -1,6 +1,6 @@
 ---
 title: "Kong"
-title_tag: "Module Kong | Package Kong"
+title_tag: "kong.Kong"
 meta_desc: "A Pulumi package for creating and managing Kong resources."
 menu:
     reference:
@@ -33,26 +33,8 @@ A Pulumi package for creating and managing Kong resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.html" title="Pulumi.Kong">Pulumi.Kong</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#" title="kong">kong</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kong/#" title="@pulumi/kong">@pulumi/kong</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kong" title="pulumi_kong">pulumi_kong</a></dd>
-
+	<dd>3.0.0</dd>
 </dl>
 

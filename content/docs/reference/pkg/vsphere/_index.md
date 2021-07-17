@@ -1,6 +1,6 @@
 ---
 title: "vSphere"
-title_tag: "Module vSphere | Package vSphere"
+title_tag: "vsphere.vSphere"
 meta_desc: "A Pulumi package for creating vsphere resources"
 menu:
     reference:
@@ -31,6 +31,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="distributedvirtualswitch" title="DistributedVirtualSwitch"><span class="symbol resource"></span>DistributedVirtualSwitch</a></li>
     <li><a href="dpmhostoverride" title="DpmHostOverride"><span class="symbol resource"></span>DpmHostOverride</a></li>
     <li><a href="drsvmoverride" title="DrsVmOverride"><span class="symbol resource"></span>DrsVmOverride</a></li>
+    <li><a href="entitypermissions" title="EntityPermissions"><span class="symbol resource"></span>EntityPermissions</a></li>
     <li><a href="file" title="File"><span class="symbol resource"></span>File</a></li>
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="havmoverride" title="HaVmOverride"><span class="symbol resource"></span>HaVmOverride</a></li>
@@ -41,6 +42,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="nasdatastore" title="NasDatastore"><span class="symbol resource"></span>NasDatastore</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourcepool" title="ResourcePool"><span class="symbol resource"></span>ResourcePool</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="storagedrsvmoverride" title="StorageDrsVmOverride"><span class="symbol resource"></span>StorageDrsVmOverride</a></li>
     <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="tagcategory" title="TagCategory"><span class="symbol resource"></span>TagCategory</a></li>
@@ -49,6 +51,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="virtualdisk" title="VirtualDisk"><span class="symbol resource"></span>VirtualDisk</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
     <li><a href="virtualmachinesnapshot" title="VirtualMachineSnapshot"><span class="symbol resource"></span>VirtualMachineSnapshot</a></li>
+    <li><a href="vmstoragepolicy" title="VmStoragePolicy"><span class="symbol resource"></span>VmStoragePolicy</a></li>
     <li><a href="vmfsdatastore" title="VmfsDatastore"><span class="symbol resource"></span>VmfsDatastore</a></li>
     <li><a href="vnic" title="Vnic"><span class="symbol resource"></span>Vnic</a></li>
 </ul>
@@ -63,11 +66,16 @@ A Pulumi package for creating vsphere resources
     <li><a href="getdatastore" title="GetDatastore"><span class="symbol function"></span>GetDatastore</a></li>
     <li><a href="getdatastorecluster" title="GetDatastoreCluster"><span class="symbol function"></span>GetDatastoreCluster</a></li>
     <li><a href="getdistributedvirtualswitch" title="GetDistributedVirtualSwitch"><span class="symbol function"></span>GetDistributedVirtualSwitch</a></li>
+    <li><a href="getdynamic" title="GetDynamic"><span class="symbol function"></span>GetDynamic</a></li>
     <li><a href="getfolder" title="GetFolder"><span class="symbol function"></span>GetFolder</a></li>
     <li><a href="gethost" title="GetHost"><span class="symbol function"></span>GetHost</a></li>
+    <li><a href="gethostpcidevice" title="GetHostPciDevice"><span class="symbol function"></span>GetHostPciDevice</a></li>
+    <li><a href="gethostthumbprint" title="GetHostThumbprint"><span class="symbol function"></span>GetHostThumbprint</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getovfvmtemplate" title="GetOvfVmTemplate"><span class="symbol function"></span>GetOvfVmTemplate</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getresourcepool" title="GetResourcePool"><span class="symbol function"></span>GetResourcePool</a></li>
+    <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="gettag" title="GetTag"><span class="symbol function"></span>GetTag</a></li>
     <li><a href="gettagcategory" title="GetTagCategory"><span class="symbol function"></span>GetTagCategory</a></li>
     <li><a href="getvappcontainer" title="GetVappContainer"><span class="symbol function"></span>GetVappContainer</a></li>
@@ -82,26 +90,8 @@ A Pulumi package for creating vsphere resources
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.3.5</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.html" title="Pulumi.VSphere">Pulumi.VSphere</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#" title="vsphere">vsphere</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#" title="@pulumi/vsphere">@pulumi/vsphere</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_vsphere" title="pulumi_vsphere">pulumi_vsphere</a></dd>
-
+	<dd>4.0.1</dd>
 </dl>
 

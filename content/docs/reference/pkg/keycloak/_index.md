@@ -1,6 +1,6 @@
 ---
 title: "Keycloak"
-title_tag: "Package Keycloak"
+title_tag: "Keycloak Package"
 meta_desc: "A Pulumi package for creating and managing keycloak cloud resources."
 menu:
     reference:
@@ -25,6 +25,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 <ul class="api">
     <li><a href="attributeimporteridentityprovidermapper" title="AttributeImporterIdentityProviderMapper"><span class="symbol resource"></span>AttributeImporterIdentityProviderMapper</a></li>
     <li><a href="attributetoroleidentitymapper" title="AttributeToRoleIdentityMapper"><span class="symbol resource"></span>AttributeToRoleIdentityMapper</a></li>
+    <li><a href="customidentityprovidermapping" title="CustomIdentityProviderMapping"><span class="symbol resource"></span>CustomIdentityProviderMapping</a></li>
     <li><a href="customuserfederation" title="CustomUserFederation"><span class="symbol resource"></span>CustomUserFederation</a></li>
     <li><a href="defaultgroups" title="DefaultGroups"><span class="symbol resource"></span>DefaultGroups</a></li>
     <li><a href="genericclientprotocolmapper" title="GenericClientProtocolMapper"><span class="symbol resource"></span>GenericClientProtocolMapper</a></li>
@@ -34,21 +35,29 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="grouproles" title="GroupRoles"><span class="symbol resource"></span>GroupRoles</a></li>
     <li><a href="hardcodedattributeidentityprovidermapper" title="HardcodedAttributeIdentityProviderMapper"><span class="symbol resource"></span>HardcodedAttributeIdentityProviderMapper</a></li>
     <li><a href="hardcodedroleidentitymapper" title="HardcodedRoleIdentityMapper"><span class="symbol resource"></span>HardcodedRoleIdentityMapper</a></li>
+    <li><a href="identityprovidertokenexchangescopepermission" title="IdentityProviderTokenExchangeScopePermission"><span class="symbol resource"></span>IdentityProviderTokenExchangeScopePermission</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="realm" title="Realm"><span class="symbol resource"></span>Realm</a></li>
     <li><a href="realmevents" title="RealmEvents"><span class="symbol resource"></span>RealmEvents</a></li>
     <li><a href="requiredaction" title="RequiredAction"><span class="symbol resource"></span>RequiredAction</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usergroups" title="UserGroups"><span class="symbol resource"></span>UserGroups</a></li>
+    <li><a href="userroles" title="UserRoles"><span class="symbol resource"></span>UserRoles</a></li>
     <li><a href="usertemplateimporteridentityprovidermapper" title="UserTemplateImporterIdentityProviderMapper"><span class="symbol resource"></span>UserTemplateImporterIdentityProviderMapper</a></li>
+    <li><a href="userspermissions" title="UsersPermissions"><span class="symbol resource"></span>UsersPermissions</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getauthenticationexecution" title="GetAuthenticationExecution"><span class="symbol function"></span>GetAuthenticationExecution</a></li>
+    <li><a href="getauthenticationflow" title="GetAuthenticationFlow"><span class="symbol function"></span>GetAuthenticationFlow</a></li>
+    <li><a href="getclientdescriptionconverter" title="GetClientDescriptionConverter"><span class="symbol function"></span>GetClientDescriptionConverter</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getrealm" title="GetRealm"><span class="symbol function"></span>GetRealm</a></li>
     <li><a href="getrealmkeys" title="GetRealmKeys"><span class="symbol function"></span>GetRealmKeys</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -58,26 +67,8 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.3.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.html" title="Pulumi.Keycloak">Pulumi.Keycloak</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#" title="keycloak">keycloak</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#" title="@pulumi/keycloak">@pulumi/keycloak</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_keycloak" title="pulumi_keycloak">pulumi_keycloak</a></dd>
-
+	<dd>4.1.0</dd>
 </dl>
 

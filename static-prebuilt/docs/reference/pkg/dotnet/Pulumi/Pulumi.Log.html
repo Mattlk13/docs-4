@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Log
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -37,8 +37,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>
-            </div>
+              </a>    </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -162,8 +161,8 @@ runs, and will be available from the Web console afterwards.</p>
   </span>
   <a id="Pulumi_Log_Error_" data-uid="Pulumi.Log.Error*"></a>
   <h4 id="Pulumi_Log_Error_System_String_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Error(System.String,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Error(String, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs a fatal error to indicate that the tool should stop processing resource
-operations immediately.</p>
+  <div class="markdown level1 summary"><p>Logs a fatal condition. Consider raising an exception
+after calling Error to stop the Pulumi program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -207,8 +206,8 @@ operations immediately.</p>
   </span>
   <a id="Pulumi_Log_Exception_" data-uid="Pulumi.Log.Exception*"></a>
   <h4 id="Pulumi_Log_Exception_System_Exception_Pulumi_Resource_System_Nullable_System_Int32__System_Nullable_System_Boolean__" data-uid="Pulumi.Log.Exception(System.Exception,Pulumi.Resource,System.Nullable{System.Int32},System.Nullable{System.Boolean})">Exception(Exception, Resource, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)</h4>
-  <div class="markdown level1 summary"><p>Logs a fatal exception to indicate that the tool should stop processing resource
-operations immediately.</p>
+  <div class="markdown level1 summary"><p>Logs an exception. Consider raising the exception after
+calling this method to stop the Pulumi program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -351,8 +350,7 @@ operations.</p>
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
       
       <footer>
@@ -362,7 +360,7 @@ operations.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2020, Pulumi Corporation.
+            Copyright 2016-2021, Pulumi Corporation.
             
           </div>
         </div>

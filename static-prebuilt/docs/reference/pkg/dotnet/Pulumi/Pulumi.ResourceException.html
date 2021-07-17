@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResourceException
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -37,8 +37,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>
-            </div>
+              </a>    </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -83,10 +82,20 @@ indicate no usefulness of presenting that stack to the user.</p>
     <div class="level1"><span class="xref">System.Exception</span></div>
     <div class="level2"><span class="xref">ResourceException</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <span class="xref">System.Exception.GetBaseException()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetType()</span>
     </div>
     <div>
       <span class="xref">System.Exception.ToString()</span>
@@ -113,6 +122,12 @@ indicate no usefulness of presenting that stack to the user.</p>
       <span class="xref">System.Exception.StackTrace</span>
     </div>
     <div>
+      <span class="xref">System.Exception.TargetSite</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.SerializeObjectState</span>
+    </div>
+    <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
@@ -120,9 +135,6 @@ indicate no usefulness of presenting that stack to the user.</p>
     </div>
     <div>
       <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
@@ -135,7 +147,7 @@ indicate no usefulness of presenting that stack to the user.</p>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
   <h5 id="Pulumi_ResourceException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ResourceException : Exception</code></pre>
+    <pre><code class="lang-csharp hljs">public class ResourceException : Exception, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -177,6 +189,10 @@ indicate no usefulness of presenting that stack to the user.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
@@ -192,8 +208,7 @@ indicate no usefulness of presenting that stack to the user.</p>
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
       
       <footer>
@@ -203,7 +218,7 @@ indicate no usefulness of presenting that stack to the user.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2020, Pulumi Corporation.
+            Copyright 2016-2021, Pulumi Corporation.
             
           </div>
         </div>

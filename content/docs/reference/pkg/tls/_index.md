@@ -1,6 +1,6 @@
 ---
 title: "TLS"
-title_tag: "Module TLS | Package TLS"
+title_tag: "tls.TLS"
 meta_desc: "A Pulumi package to create TLS resources in Pulumi programs."
 menu:
     reference:
@@ -23,6 +23,7 @@ A Pulumi package to create TLS resources in Pulumi programs.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getpublickey" title="GetPublicKey"><span class="symbol function"></span>GetPublicKey</a></li>
 </ul>
 
@@ -33,26 +34,8 @@ A Pulumi package to create TLS resources in Pulumi programs.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.html" title="Pulumi.Tls">Pulumi.Tls</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#" title="tls">tls</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/tls/#" title="@pulumi/tls">@pulumi/tls</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_tls" title="pulumi_tls">pulumi_tls</a></dd>
-
+	<dd>4.0.0</dd>
 </dl>
 

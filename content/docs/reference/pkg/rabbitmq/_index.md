@@ -1,6 +1,6 @@
 ---
 title: "RabbitMQ"
-title_tag: "Module RabbitMQ | Package RabbitMQ"
+title_tag: "rabbitmq.RabbitMQ"
 meta_desc: "A Pulumi package for creating and managing RabbitMQ resources."
 menu:
     reference:
@@ -16,10 +16,12 @@ A Pulumi package for creating and managing RabbitMQ resources.
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
     <li><a href="exchange" title="Exchange"><span class="symbol resource"></span>Exchange</a></li>
+    <li><a href="federationupstream" title="FederationUpstream"><span class="symbol resource"></span>FederationUpstream</a></li>
     <li><a href="permissions" title="Permissions"><span class="symbol resource"></span>Permissions</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
+    <li><a href="shovel" title="Shovel"><span class="symbol resource"></span>Shovel</a></li>
     <li><a href="topicpermissions" title="TopicPermissions"><span class="symbol resource"></span>TopicPermissions</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="vhost" title="VHost"><span class="symbol resource"></span>VHost</a></li>
@@ -32,26 +34,8 @@ A Pulumi package for creating and managing RabbitMQ resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.html" title="Pulumi.RabbitMQ">Pulumi.RabbitMQ</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#" title="rabbitmq">rabbitmq</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#" title="@pulumi/rabbitmq">@pulumi/rabbitmq</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_rabbitmq" title="pulumi_rabbitmq">pulumi_rabbitmq</a></dd>
-
+	<dd>3.0.0</dd>
 </dl>
 

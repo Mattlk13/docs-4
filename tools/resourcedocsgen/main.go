@@ -18,9 +18,6 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/pulumi/pulumi/pkg/v2/codegen/dotnet"
-	go_gen "github.com/pulumi/pulumi/pkg/v2/codegen/go"
-	"github.com/pulumi/pulumi/pkg/v2/codegen/nodejs"
 	"io/ioutil"
 	"os"
 	"path"
@@ -28,10 +25,13 @@ import (
 	"github.com/golang/glog"
 	"github.com/pkg/errors"
 
-	docsgen "github.com/pulumi/pulumi/pkg/v2/codegen/docs"
-	pschema "github.com/pulumi/pulumi/pkg/v2/codegen/schema"
-	"github.com/pulumi/pulumi/sdk/v2/go/common/tools"
-	"github.com/pulumi/pulumi/sdk/v2/go/common/util/contract"
+	docsgen "github.com/pulumi/pulumi/pkg/v3/codegen/docs"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/dotnet"
+	go_gen "github.com/pulumi/pulumi/pkg/v3/codegen/go"
+	"github.com/pulumi/pulumi/pkg/v3/codegen/nodejs"
+	pschema "github.com/pulumi/pulumi/pkg/v3/codegen/schema"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tools"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
 func main() {
@@ -73,6 +73,12 @@ func main() {
 		}
 
 		mergeOverlaySchemaSpec(mainSpec, overlaySpec)
+	}
+
+	// Delete existing docs before generating new ones.
+	if err := os.RemoveAll(outDir); err != nil {
+		glog.Infof("error deleting provider directory %v: %v", outDir, err)
+		os.Exit(1)
 	}
 
 	if err := generateDocsFromSchema(outDir, mainSpec); err != nil {

@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-title_tag: "Module Docker | Package Docker"
+title_tag: "docker.Docker"
 meta_desc: "A Pulumi package for interacting with Docker in Pulumi programs"
 menu:
     reference:
@@ -15,8 +15,11 @@ A Pulumi package for interacting with Docker in Pulumi programs
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
+    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
+    <li><a href="plugin" title="Plugin"><span class="symbol resource"></span>Plugin</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="registryimage" title="RegistryImage"><span class="symbol resource"></span>RegistryImage</a></li>
     <li><a href="remoteimage" title="RemoteImage"><span class="symbol resource"></span>RemoteImage</a></li>
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
@@ -27,6 +30,7 @@ A Pulumi package for interacting with Docker in Pulumi programs
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getplugin" title="GetPlugin"><span class="symbol function"></span>GetPlugin</a></li>
     <li><a href="getregistryimage" title="GetRegistryImage"><span class="symbol function"></span>GetRegistryImage</a></li>
 </ul>
 
@@ -37,26 +41,8 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.2.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.html" title="Pulumi.Docker">Pulumi.Docker</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#" title="docker">docker</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/docker/#" title="@pulumi/docker">@pulumi/docker</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_docker" title="pulumi_docker">pulumi_docker</a></dd>
-
+	<dd>3.0.0</dd>
 </dl>
 

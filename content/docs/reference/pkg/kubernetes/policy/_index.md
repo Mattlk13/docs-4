@@ -1,6 +1,6 @@
 ---
 title: "policy"
-title_tag: "Package policy"
+title_tag: "policy Package"
 meta_desc: ""
 ---
 
@@ -11,6 +11,7 @@ meta_desc: ""
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
+    <li><a href="v1/" title="v1"><span class="symbol module"></span>v1</a></li>
     <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
 </ul>
 
@@ -21,21 +22,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/policy?tab=doc#" title="kubernetes/policy">kubernetes/policy</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/policy/#" title="@pulumi/kubernetes/policy">@pulumi/kubernetes/policy</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/policy" title="pulumi_kubernetes/policy">pulumi_kubernetes/policy</a></dd>
-
+	<dd>3.5.0</dd>
 </dl>
 

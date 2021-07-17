@@ -1,6 +1,6 @@
 ---
 title: "Consul"
-title_tag: "Module Consul | Package Consul"
+title_tag: "consul.Consul"
 meta_desc: "A Pulumi package for creating and managing consul resources."
 menu:
     reference:
@@ -20,9 +20,11 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="aclrole" title="AclRole"><span class="symbol resource"></span>AclRole</a></li>
     <li><a href="acltoken" title="AclToken"><span class="symbol resource"></span>AclToken</a></li>
     <li><a href="acltokenpolicyattachment" title="AclTokenPolicyAttachment"><span class="symbol resource"></span>AclTokenPolicyAttachment</a></li>
+    <li><a href="acltokenroleattachment" title="AclTokenRoleAttachment"><span class="symbol resource"></span>AclTokenRoleAttachment</a></li>
     <li><a href="agentservice" title="AgentService"><span class="symbol resource"></span>AgentService</a></li>
     <li><a href="autopilotconfig" title="AutopilotConfig"><span class="symbol resource"></span>AutopilotConfig</a></li>
     <li><a href="catalogentry" title="CatalogEntry"><span class="symbol resource"></span>CatalogEntry</a></li>
+    <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
     <li><a href="configentry" title="ConfigEntry"><span class="symbol resource"></span>ConfigEntry</a></li>
     <li><a href="intention" title="Intention"><span class="symbol resource"></span>Intention</a></li>
     <li><a href="keyprefix" title="KeyPrefix"><span class="symbol resource"></span>KeyPrefix</a></li>
@@ -66,26 +68,8 @@ A Pulumi package for creating and managing consul resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.html" title="Pulumi.Consul">Pulumi.Consul</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#" title="consul">consul</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/consul/#" title="@pulumi/consul">@pulumi/consul</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_consul" title="pulumi_consul">pulumi_consul</a></dd>
-
+	<dd>3.2.0</dd>
 </dl>
 

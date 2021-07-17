@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Pulumi
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -37,8 +37,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>
-            </div>
+              </a>    </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -109,7 +108,7 @@ archives.</p>
 </section>
       <h4><a class="xref" href="Pulumi.ComponentResource.html">ComponentResource</a></h4>
       <section><p>A <a class="xref" href="Pulumi.Resource.html">Resource</a> that aggregates one or more other child resources into a higher
-level abstraction.The component resource itself is a resource, but does not require custom
+level abstraction. The component resource itself is a resource, but does not require custom
 CRUD operations for provisioning.</p>
 </section>
       <h4><a class="xref" href="Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></h4>
@@ -125,7 +124,7 @@ otherwise share the same key.  For example, a bag whose name is <code>pulumi:foo
 such as <code>pulumi:foo:a</code>, ..., and <code>pulumi:bar:a</code>, respectively.</p>
 </section>
       <h4><a class="xref" href="Pulumi.CustomResource.html">CustomResource</a></h4>
-      <section><p>CustomResource is a resource whose create, read, update, and delete(CRUD) operations are
+      <section><p>CustomResource is a resource whose create, read, update, and delete (CRUD) operations are
 managed by performing external operations on some physical entity. The engine understands
 how to diff and perform partial updates of them, and these CRUD operations are implemented
 in a dynamically loaded plugin for the defining package.</p>
@@ -170,10 +169,24 @@ The input dictionary may only contain objects that are serializable by
 Pulumi, i.e only the following types are allowed:</p>
 <ul><li>Primitive types: <span class="xref">System.String</span>, <span class="xref">System.Double</span>,
 <span class="xref">System.Int32</span>, <span class="xref">System.Boolean</span></li><li><a class="xref" href="Pulumi.Asset.html">Asset</a>, <a class="xref" href="Pulumi.Archive.html">Archive</a>, or
-<a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><see cref="!:System.Text.Json.JsonElement"></see>
+<a class="xref" href="Pulumi.AssetArchive.html">AssetArchive</a></li><li><span class="xref">System.Text.Json.JsonElement</span>
 </li><li>Generic collections of the above:
 <span class="xref">System.Collections.Immutable.ImmutableArray&lt;T&gt;</span>, <span class="xref">System.Collections.Immutable.ImmutableDictionary&lt;TKey, TValue&gt;</span>
 with <span class="xref">System.String</span> keys, <a class="xref" href="Pulumi.Union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
+</section>
+      <h4><a class="xref" href="Pulumi.EnumTypeAttribute.html">EnumTypeAttribute</a></h4>
+      <section><p>Attribute used by a Pulumi Cloud Provider Package to mark enum types.</p>
+<p>Requirements for a struct-based enum to be (de)serialized are as follows.
+It must:</p>
+<ul>
+<li>Be a value type (struct) decoratted with EnumTypeAttribute.</li>
+<li>Have a constructor that takes a single parameter of the underlying type.
+The constructor can be private.</li>
+<li>Have an explicit conversion operator that converts the enum type to the underlying type.</li>
+<li>Have an underlying type of String or Double.</li>
+<li>Implementing IEquatable, adding ==/=! operators and overriding ToString isn't required,
+but is recommended and is what our codegen does.</li>
+</ul>
 </section>
       <h4><a class="xref" href="Pulumi.FileArchive.html">FileArchive</a></h4>
       <section><p>A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a
@@ -208,7 +221,7 @@ backing field for the property.  i.e.</p>
       <h4><a class="xref" href="Pulumi.InputExtensions.html">InputExtensions</a></h4>
       <section></section>
       <h4><a class="xref" href="Pulumi.InputJson.html">InputJson</a></h4>
-      <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <see cref="!:JsonElement"></see>.</p>
+      <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <span class="xref">System.Text.Json.JsonElement</span>.</p>
 </section>
       <h4><a class="xref" href="Pulumi.InputList-1.html">InputList&lt;T&gt;</a></h4>
       <section><p>A list of values that can be passed in as the arguments to a <a class="xref" href="Pulumi.Resource.html">Resource</a>.
@@ -237,6 +250,8 @@ or
         ListProperty = new [] { Value1, Value2, Value3 },
     });</code></pre>
 </section>
+      <h4><a class="xref" href="Pulumi.InputListExtensions.html">InputListExtensions</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.InputMap-1.html">InputMap&lt;V&gt;</a></h4>
       <section><p>A mapping of <span class="xref">System.String</span>s to values that can be passed in as the arguments to a
 <a class="xref" href="Pulumi.Resource.html">Resource</a>. The individual values are themselves <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a>s.  i.e.
@@ -266,6 +281,8 @@ this form:
         },
     });</code></pre>
 </section>
+      <h4><a class="xref" href="Pulumi.InputMapExtensions.html">InputMapExtensions</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.InputUnion-2.html">InputUnion&lt;T0, T1&gt;</a></h4>
       <section><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that can be one of two different types. For
 example, it might potentially be an <span class="xref">System.Int32</span> some of the time or a <span class="xref">System.String</span> in other cases.</p>
@@ -282,7 +299,7 @@ example, it might potentially be an <span class="xref">System.Int32</span> some 
 runs, and will be available from the Web console afterwards.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Output.html">Output</a></h4>
-      <section><p>Useful static utility methods for both creating and working wit <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
+      <section><p>Useful static utility methods for both creating and working with <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s.</p>
 </section>
       <h4><a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a></h4>
       <section><p><a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>s are a key part of how Pulumi tracks dependencies between <a class="xref" href="Pulumi.Resource.html">Resource</a>s. Because the values of outputs are not available until resources are
@@ -302,7 +319,7 @@ in your Pulumi programs to mark outputs of <a class="xref" href="Pulumi.Componen
       <h4><a class="xref" href="Pulumi.OutputConstructorAttribute.html">OutputConstructorAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to marks the constructor for a complex
 property type so that it can be instantiated by the Pulumi runtime.</p>
-<p>The constructor should contain parameters that map to the resultant <span class="xref">Google.Protobuf.WellKnownTypes.Struct.Fields</span> returned by the engine.</p>
+<p>The constructor should contain parameters that map to the resultant <see cref="!:Struct.Fields"></see> returned by the engine.</p>
 </section>
       <h4><a class="xref" href="Pulumi.OutputExtensions.html">OutputExtensions</a></h4>
       <section><p>Extension methods for <a class="xref" href="Pulumi.Output-1.html">Output&lt;T&gt;</a>.</p>
@@ -344,6 +361,8 @@ indicate no usefulness of presenting that stack to the user.</p>
       <h4><a class="xref" href="Pulumi.ResourceOptions.html">ResourceOptions</a></h4>
       <section><p>ResourceOptions is a bag of optional settings that control a resource's behavior.</p>
 </section>
+      <h4><a class="xref" href="Pulumi.ResourceTypeAttribute.html">ResourceTypeAttribute</a></h4>
+      <section></section>
       <h4><a class="xref" href="Pulumi.Stack.html">Stack</a></h4>
       <section><p>Stack is the root resource for a Pulumi stack. Derive from this class to create your
 stack definitions.</p>
@@ -403,8 +422,7 @@ resource will not be transformed.</p>
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
       
       <footer>
@@ -414,7 +432,7 @@ resource will not be transformed.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2020, Pulumi Corporation.
+            Copyright 2016-2021, Pulumi Corporation.
             
           </div>
         </div>

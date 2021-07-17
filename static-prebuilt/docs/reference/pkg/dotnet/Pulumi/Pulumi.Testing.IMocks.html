@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IMocks
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -37,8 +37,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>
-            </div>
+              </a>    </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -83,17 +82,17 @@
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Testing/IMocks.cs/#L34">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Testing/IMocks.cs/#L28">View Source</a>
   </span>
   <a id="Pulumi_Testing_IMocks_CallAsync_" data-uid="Pulumi.Testing.IMocks.CallAsync*"></a>
-  <h4 id="Pulumi_Testing_IMocks_CallAsync_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_String_" data-uid="Pulumi.Testing.IMocks.CallAsync(System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String)">CallAsync(String, ImmutableDictionary&lt;String, Object&gt;, String)</h4>
+  <h4 id="Pulumi_Testing_IMocks_CallAsync_Pulumi_Testing_MockCallArgs_" data-uid="Pulumi.Testing.IMocks.CallAsync(Pulumi.Testing.MockCallArgs)">CallAsync(MockCallArgs)</h4>
   <div class="markdown level1 summary"><p>Invoked when the program needs to call a provider to load data (e.g., to retrieve an existing
 resource).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;object&gt; CallAsync(string token, ImmutableDictionary&lt;string, object&gt; args, string provider)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;object&gt; CallAsync(MockCallArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -106,21 +105,9 @@ resource).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">token</span></td>
-        <td><p>Function token.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Testing.MockCallArgs.html">MockCallArgs</a></td>
         <td><span class="parametername">args</span></td>
-        <td><p>Dictionary of input arguments.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">provider</span></td>
-        <td><p>Provider.</p>
+        <td><p>MockCallArgs</p>
 </td>
       </tr>
     </tbody>
@@ -142,16 +129,16 @@ resource).</p>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Testing/IMocks.cs/#L23">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Testing/IMocks.cs/#L20">View Source</a>
   </span>
   <a id="Pulumi_Testing_IMocks_NewResourceAsync_" data-uid="Pulumi.Testing.IMocks.NewResourceAsync*"></a>
-  <h4 id="Pulumi_Testing_IMocks_NewResourceAsync_System_String_System_String_System_Collections_Immutable_ImmutableDictionary_System_String_System_Object__System_String_System_String_" data-uid="Pulumi.Testing.IMocks.NewResourceAsync(System.String,System.String,System.Collections.Immutable.ImmutableDictionary{System.String,System.Object},System.String,System.String)">NewResourceAsync(String, String, ImmutableDictionary&lt;String, Object&gt;, String, String)</h4>
+  <h4 id="Pulumi_Testing_IMocks_NewResourceAsync_Pulumi_Testing_MockResourceArgs_" data-uid="Pulumi.Testing.IMocks.NewResourceAsync(Pulumi.Testing.MockResourceArgs)">NewResourceAsync(MockResourceArgs)</h4>
   <div class="markdown level1 summary"><p>Invoked when a new resource is created by the program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;(string id, object state)&gt; NewResourceAsync(string type, string name, ImmutableDictionary&lt;string, object&gt; inputs, string provider, string id)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;(string id, object state)&gt; NewResourceAsync(MockResourceArgs args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,33 +151,9 @@ resource).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Resource type name.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Resource name.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-        <td><span class="parametername">inputs</span></td>
-        <td><p>Dictionary of resource input properties.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">provider</span></td>
-        <td><p>Provider.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Resource identifier.</p>
+        <td><a class="xref" href="Pulumi.Testing.MockResourceArgs.html">MockResourceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>MockResourceArgs</p>
 </td>
       </tr>
     </tbody>
@@ -207,7 +170,7 @@ resource).</p>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
         <td><p>A tuple of a resource identifier and resource state. State can be either a POCO
-or a dictionary bag.</p>
+or a dictionary bag. The returned ID may be null for component resources.</p>
 </td>
       </tr>
     </tbody>
@@ -219,7 +182,7 @@ or a dictionary bag.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Testing/IMocks.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Testing/IMocks.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -227,8 +190,7 @@ or a dictionary bag.</p>
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
       
       <footer>
@@ -238,7 +200,7 @@ or a dictionary bag.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2020, Pulumi Corporation.
+            Copyright 2016-2021, Pulumi Corporation.
             
           </div>
         </div>

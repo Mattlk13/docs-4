@@ -135,3 +135,28 @@ Python programs can export values. Exported values are attached to the program's
     # the-answer  42
 
 .. autofunction:: pulumi.export
+
+Automation API
+--------------
+
+.. automodule:: pulumi.automation
+
+.. autofunction:: pulumi.automation.create_stack
+
+.. autofunction:: pulumi.automation.select_stack
+
+.. autofunction:: pulumi.automation.create_or_select_stack
+
+.. autoclass:: pulumi.automation.LocalWorkspace
+    :members:
+
+.. autoclass:: pulumi.automation.Stack
+    :members:
+
+.. autoclass:: pulumi.automation.LocalWorkspaceOptions
+
+.. autoclass:: pulumi.automation.ProjectSettings
+
+.. autoclass:: pulumi.automation.StackSettings
+
+.. autoclass:: pulumi.automation.ConfigValue

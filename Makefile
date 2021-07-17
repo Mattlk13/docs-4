@@ -1,7 +1,3 @@
-# The HUGO_ENVIRONMENT environment variable determines which Hugo environment
-# to build/serve.
-HUGO_ENVIRONMENT ?= development
-
 .PHONY: default
 default: banner generate build
 
@@ -14,32 +10,26 @@ banner:
 	@echo -e "\033[1;37mPulumi Website           \033[0m"
 	@echo -e "\033[1;37m=========================\033[0m"
 
+.PHONY: clean
+clean:
+	./scripts/clean.sh
+
 .PHONY: ensure
-ensure:
-	yarn install
-	yarn --cwd components install
+ensure: clean
+	./scripts/ensure.sh
 
 .PHONY: ensure_tools
 ensure_tools:
 	echo "Restoring resourcedocsgen deps..."
-	cd tools/resourcedocsgen && go mod tidy && go mod download
-
-.PHONY: lint_markdown
-lint_markdown:
-	yarn lint-markdown
+	cd tools/resourcedocsgen && go mod download
 
 .PHONY: serve
 serve:
-	@echo -e "\033[0;32mSERVE:\033[0m"
-	yarn lint-markdown --no-error
-	yarn --cwd components run build
-	$(MAKE) copy_static_prebuilt
-	hugo server --buildDrafts --buildFuture --renderToDisk
+	./scripts/serve.sh
 
-.PHONY: serve-components
-serve-components:
-	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
-	yarn --cwd components run start
+.PHONY: serve-static
+serve-static:
+	yarn run http-server public
 
 .PHONY: generate
 generate:
@@ -49,42 +39,63 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
+.PHONY: build
+build:
+	@echo -e "\033[0;32mBUILD:\033[0m"
+	./scripts/build-site.sh
+
+.PHONY: lint
+lint:
+	yarn run lint-markdown
+
+.PHONY: test
+test:
+	$(MAKE) check_links_local
+
+.PHONY: check_links_local
+check_links_local:
+	$(MAKE) banner
+	$(MAKE) ensure
+	./scripts/check-links.sh local
+
+.PHONY: check_links
+check_links:
+	$(MAKE) banner
+	$(MAKE) ensure
+	./scripts/check-links.sh www
+
+.PHONY: new_learn_module
+new_learn_module:
+	./scripts/new-learn-module.sh
+
 .PHONY: copy_static_prebuilt
 copy_static_prebuilt:
 	mkdir -p public && cp -R static-prebuilt/* public/
 
-.PHONY: build
-build:
-	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
-	yarn lint-markdown
-	NODE_ENV=production yarn --cwd components run build
-	$(MAKE) copy_static_prebuilt
-	./scripts/run-hugo-build.sh
-	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
-	rm -rf ./public/docs/search-data
-
-.PHONY: test
-test:
-	./scripts/check-links.sh
+.PHONY: new_learn_topic
+new_learn_topic:
+	./scripts/new-learn-topic.sh
 
 .PHONY: ci_push
 ci_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) build
-	./scripts/run-pulumi.sh update production
+	$(MAKE) lint
+	./scripts/ci-push.sh
 
 .PHONY: ci_pull_request
-ci_pull_request::
+ci_pull_request:
 	$(MAKE) banner
 	$(MAKE) ensure
-	$(MAKE) build
-	./scripts/check-links.sh pull_request
-	./scripts/run-pulumi.sh preview production
+	$(MAKE) lint
+	./scripts/ci-pull-request.sh
 
-.PHONY: ci_cron
-ci_cron::
+.PHONY: ci_pull_request_closed
+ci_pull_request_closed:
 	$(MAKE) banner
-	$(MAKE) ensure
-	$(MAKE) build
-	$(MAKE) test
+	./scripts/ci-pull-request-closed.sh
+
+.PHONY: ci_bucket_cleanup
+ci_bucket_cleanup:
+	$(MAKE) banner
+	./scripts/ci-bucket-cleanup.sh

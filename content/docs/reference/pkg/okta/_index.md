@@ -1,6 +1,6 @@
 ---
 title: "Okta"
-title_tag: "Package Okta"
+title_tag: "Okta Package"
 meta_desc: "A Pulumi package for creating and managing okta resources."
 menu:
     reference:
@@ -31,7 +31,20 @@ A Pulumi package for creating and managing okta resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="adminroletargets" title="AdminRoleTargets"><span class="symbol resource"></span>AdminRoleTargets</a></li>
+    <li><a href="appoauthapiscope" title="AppOauthApiScope"><span class="symbol resource"></span>AppOauthApiScope</a></li>
+    <li><a href="authserverclaimdefault" title="AuthServerClaimDefault"><span class="symbol resource"></span>AuthServerClaimDefault</a></li>
+    <li><a href="authserverdefault" title="AuthServerDefault"><span class="symbol resource"></span>AuthServerDefault</a></li>
+    <li><a href="eventhook" title="EventHook"><span class="symbol resource"></span>EventHook</a></li>
+    <li><a href="policymfadefault" title="PolicyMfaDefault"><span class="symbol resource"></span>PolicyMfaDefault</a></li>
+    <li><a href="policypassworddefault" title="PolicyPasswordDefault"><span class="symbol resource"></span>PolicyPasswordDefault</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="templatesms" title="TemplateSms"><span class="symbol resource"></span>TemplateSms</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,26 +54,8 @@ A Pulumi package for creating and managing okta resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.html" title="Pulumi.Okta">Pulumi.Okta</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#" title="okta">okta</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/#" title="@pulumi/okta">@pulumi/okta</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta" title="pulumi_okta">pulumi_okta</a></dd>
-
+	<dd>3.0.0</dd>
 </dl>
 

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ComponentResource
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -37,8 +37,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>
-            </div>
+              </a>    </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -72,7 +71,7 @@
   <h1 id="Pulumi_ComponentResource" data-uid="Pulumi.ComponentResource" class="text-break">Class ComponentResource
   </h1>
   <div class="markdown level0 summary"><p>A <a class="xref" href="Pulumi.Resource.html">Resource</a> that aggregates one or more other child resources into a higher
-level abstraction.The component resource itself is a resource, but does not require custom
+level abstraction. The component resource itself is a resource, but does not require custom
 CRUD operations for provisioning.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -125,7 +124,7 @@ CRUD operations for provisioning.</p>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L25">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L27">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource__ctor_" data-uid="Pulumi.ComponentResource.#ctor*"></a>
   <h4 id="Pulumi_ComponentResource__ctor_System_String_System_String_Pulumi_ComponentResourceOptions_" data-uid="Pulumi.ComponentResource.#ctor(System.String,System.String,Pulumi.ComponentResourceOptions)">ComponentResource(String, String, ComponentResourceOptions)</h4>
@@ -153,24 +152,85 @@ this resource depends on, controlling the order in which we perform resource ope
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">type</span></td>
-        <td></td>
+        <td><p>The type of the resource.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The unique name of the resource.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>A bag of options that control this resource's behavior.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_ComponentResource__ctor_" data-uid="Pulumi.ComponentResource.#ctor*"></a>
+  <h4 id="Pulumi_ComponentResource__ctor_System_String_System_String_Pulumi_ResourceArgs_Pulumi_ComponentResourceOptions_System_Boolean_" data-uid="Pulumi.ComponentResource.#ctor(System.String,System.String,Pulumi.ResourceArgs,Pulumi.ComponentResourceOptions,System.Boolean)">ComponentResource(String, String, ResourceArgs, ComponentResourceOptions, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates and registers a new component resource.  <code data-dev-comment-type="paramref" class="paramref">type</code> is the fully
+qualified type token and <code data-dev-comment-type="paramref" class="paramref">name</code> is the &quot;name&quot; part to use in creating a
+stable and globally unique URN for the object. <code>options.parent</code> is the optional parent
+for this component, and [options.dependsOn] is an optional list of other resources that
+this resource depends on, controlling the order in which we perform resource operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComponentResource(string type, string name, ResourceArgs args, ComponentResourceOptions options = null, bool remote = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.ResourceArgs.html">ResourceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments to use to populate the new resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">remote</span></td>
+        <td><p>True if this is a remote component resource.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L41">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L60">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
   <h4 id="Pulumi_ComponentResource_RegisterOutputs" data-uid="Pulumi.ComponentResource.RegisterOutputs">RegisterOutputs()</h4>
@@ -187,7 +247,7 @@ state as quickly as possible (instead of waiting until the entire application co
     <pre><code class="lang-csharp hljs">protected void RegisterOutputs()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L50">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L69">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
   <h4 id="Pulumi_ComponentResource_RegisterOutputs_Pulumi_Output_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.ComponentResource.RegisterOutputs(Pulumi.Output{System.Collections.Generic.IDictionary{System.String,System.Object}})">RegisterOutputs(Output&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
@@ -215,7 +275,7 @@ state as quickly as possible (instead of waiting until the entire application co
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L44">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L63">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
   <h4 id="Pulumi_ComponentResource_RegisterOutputs_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="Pulumi.ComponentResource.RegisterOutputs(System.Collections.Generic.IDictionary{System.String,System.Object})">RegisterOutputs(IDictionary&lt;String, Object&gt;)</h4>
@@ -243,7 +303,7 @@ state as quickly as possible (instead of waiting until the entire application co
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L47">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Resources/ComponentResource.cs/#L66">View Source</a>
   </span>
   <a id="Pulumi_ComponentResource_RegisterOutputs_" data-uid="Pulumi.ComponentResource.RegisterOutputs*"></a>
   <h4 id="Pulumi_ComponentResource_RegisterOutputs_System_Threading_Tasks_Task_System_Collections_Generic_IDictionary_System_String_System_Object___" data-uid="Pulumi.ComponentResource.RegisterOutputs(System.Threading.Tasks.Task{System.Collections.Generic.IDictionary{System.String,System.Object}})">RegisterOutputs(Task&lt;IDictionary&lt;String, Object&gt;&gt;)</h4>
@@ -285,8 +345,7 @@ state as quickly as possible (instead of waiting until the entire application co
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
       
       <footer>
@@ -296,7 +355,7 @@ state as quickly as possible (instead of waiting until the entire application co
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2020, Pulumi Corporation.
+            Copyright 2016-2021, Pulumi Corporation.
             
           </div>
         </div>

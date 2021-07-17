@@ -1,84 +1,32 @@
 #!/bin/bash
 set -o nounset -o errexit -o pipefail
 
-BUILD_TYPE=${1-schedule}
-HTTP_SERVER_PORT=8888
+source ./scripts/common.sh
 
-check_links() {
-    # We exclude some links:
-	#     - Our generated API docs have lots of broken links
-	#     - Our available versions page includes links to private repos
-	#     - GitHub Edit Links may be broken, because the page might not yet exist!
-	#     - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid)
-	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
-	#       although valid and publicly available, is reported as a broken link.
-	#     - A number of synthetic illustrative links come from our examples/tutorials.
-    ./node_modules/.bin/blc http://localhost:$HTTP_SERVER_PORT --recursive --follow \
-        --exclude "/docs/reference/pkg" \
-        --exclude "/docs/get-started/install/versions" \
-        --exclude "https://api.pulumi.com/" \
-        --exclude "https://github.com/pulls?" \
-        --exclude "https://github.com/pulumi/docs/edit/master" \
-        --exclude "https://github.com/pulumi/docs/issues/new" \
-        --exclude "https://www.linkedin.com/" \
-        --exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task" \
-        --exclude "https://blog.mapbox.com/" \
-        --exclude "https://www.youtube.com/" \
-        --exclude "https://apps.twitter.com/" \
-        --exclude "https://www.googleapis.com/" \
-        --exclude "https://us-central1-/" \
-        --exclude "https://www.mysql.com/" \
-        --exclude "https://ksonnet.io/" \
-        --exclude "https://www.latlong.net/" \
-        --exclude "https://media.amazonwebservices.com/architecturecenter/AWS_ac_ra_web_01.pdf" \
-        --exclude "https://www.packet.com/"
+CHECK_TYPE=${1-local}
+
+check_links_www() {
+    echo "Checking all links on pulumi.com..."
+    node scripts/check-links.js "https://www.pulumi.com" "site" 3
 }
 
 check_get_pulumi_links() {
-    # We only link to get.pulumi.com in /docs/get-started/install/ and /docs/get-started/install/versions
-    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/versions/ --follow \
-        --exclude-internal \
-        --exclude "https://www*"
-
-    npx blc http://localhost:$HTTP_SERVER_PORT/docs/get-started/install/ --follow \
-        --exclude-internal \
-        --exclude "https://www*"
+    echo "Checking get.pulumi.com links..."
+    # We only link to get.pulumi.com in /docs/get-started/install/ and /docs/get-started/install/versions.
+    node scripts/check-links.js "${1}/docs/get-started/install/versions/" "page"
+    node scripts/check-links.js "${1}/docs/get-started/install/" "page"
 }
 
-retry() {
-    local n=1
-    local max=3
-    local delay=15
-    while true; do
-    "$@" && break || {
-        if [[ $n -lt $max ]]; then
-            ((n++))
-            echo "Command failed. Attempt $n/$max:"
-            sleep $delay;
-        else
-            echo "The command has failed after $n attempts." >&2
-            exit 1
-        fi
-    }
-    done
-}
-
-# Start an HTTP server listening at the root of the built website.
-yarn run http-server public --port $HTTP_SERVER_PORT &>/dev/null &
-HTTP_SERVER_PID=$!
-
-# Run the link checker once the HTTP server is listening.
-while ! nc -z localhost $HTTP_SERVER_PORT; do sleep 0.1; done
-
-# Re-run the link checker up to three times, to handle the occasional transient failure.
-if [ $BUILD_TYPE = "pull_request" ]
-then
-    echo "Checking only get.pulumi.com links"
-    retry check_get_pulumi_links
-else 
-    echo "Checking all links"
-    retry check_links
+if [ $CHECK_TYPE = "local" ]; then
+    check_get_pulumi_links "local"
 fi
 
-# Kill the server process.
-kill $HTTP_SERVER_PID
+if [ $CHECK_TYPE = "www" ]; then
+    check_links_www
+fi
+
+# This variation lets us check important links at a specified URL.
+if [ $CHECK_TYPE = "url" ]; then
+    base_url="$2"
+    check_get_pulumi_links "$base_url"
+fi

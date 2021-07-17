@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-title_tag: "Package Azure"
+title_tag: "Azure Package"
 meta_desc: "A Pulumi package for creating and managing Microsoft Azure cloud resources."
 menu:
     reference:
@@ -21,27 +21,36 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="appinsights/" title="appinsights"><span class="symbol module"></span>appinsights</a></li>
     <li><a href="appplatform/" title="appplatform"><span class="symbol module"></span>appplatform</a></li>
     <li><a href="appservice/" title="appservice"><span class="symbol module"></span>appservice</a></li>
+    <li><a href="attestation/" title="attestation"><span class="symbol module"></span>attestation</a></li>
     <li><a href="authorization/" title="authorization"><span class="symbol module"></span>authorization</a></li>
     <li><a href="automation/" title="automation"><span class="symbol module"></span>automation</a></li>
+    <li><a href="avs/" title="avs"><span class="symbol module"></span>avs</a></li>
     <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
     <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
+    <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
     <li><a href="blueprint/" title="blueprint"><span class="symbol module"></span>blueprint</a></li>
     <li><a href="bot/" title="bot"><span class="symbol module"></span>bot</a></li>
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
     <li><a href="cognitive/" title="cognitive"><span class="symbol module"></span>cognitive</a></li>
+    <li><a href="communication/" title="communication"><span class="symbol module"></span>communication</a></li>
     <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
+    <li><a href="consumption/" title="consumption"><span class="symbol module"></span>consumption</a></li>
     <li><a href="containerservice/" title="containerservice"><span class="symbol module"></span>containerservice</a></li>
     <li><a href="core/" title="core"><span class="symbol module"></span>core</a></li>
     <li><a href="cosmosdb/" title="cosmosdb"><span class="symbol module"></span>cosmosdb</a></li>
     <li><a href="costmanagement/" title="costmanagement"><span class="symbol module"></span>costmanagement</a></li>
     <li><a href="dashboard/" title="dashboard"><span class="symbol module"></span>dashboard</a></li>
     <li><a href="databasemigration/" title="databasemigration"><span class="symbol module"></span>databasemigration</a></li>
+    <li><a href="databoxedge/" title="databoxedge"><span class="symbol module"></span>databoxedge</a></li>
     <li><a href="databricks/" title="databricks"><span class="symbol module"></span>databricks</a></li>
     <li><a href="datafactory/" title="datafactory"><span class="symbol module"></span>datafactory</a></li>
     <li><a href="datalake/" title="datalake"><span class="symbol module"></span>datalake</a></li>
+    <li><a href="dataprotection/" title="dataprotection"><span class="symbol module"></span>dataprotection</a></li>
     <li><a href="datashare/" title="datashare"><span class="symbol module"></span>datashare</a></li>
+    <li><a href="desktopvirtualization/" title="desktopvirtualization"><span class="symbol module"></span>desktopvirtualization</a></li>
     <li><a href="devspace/" title="devspace"><span class="symbol module"></span>devspace</a></li>
     <li><a href="devtest/" title="devtest"><span class="symbol module"></span>devtest</a></li>
+    <li><a href="digitaltwins/" title="digitaltwins"><span class="symbol module"></span>digitaltwins</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
@@ -49,11 +58,13 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="hdinsight/" title="hdinsight"><span class="symbol module"></span>hdinsight</a></li>
     <li><a href="healthcare/" title="healthcare"><span class="symbol module"></span>healthcare</a></li>
     <li><a href="hpc/" title="hpc"><span class="symbol module"></span>hpc</a></li>
+    <li><a href="hsm/" title="hsm"><span class="symbol module"></span>hsm</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
     <li><a href="kusto/" title="kusto"><span class="symbol module"></span>kusto</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="lighthouse/" title="lighthouse"><span class="symbol module"></span>lighthouse</a></li>
     <li><a href="loganalytics/" title="loganalytics"><span class="symbol module"></span>loganalytics</a></li>
     <li><a href="logicapps/" title="logicapps"><span class="symbol module"></span>logicapps</a></li>
     <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
@@ -65,6 +76,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="maps/" title="maps"><span class="symbol module"></span>maps</a></li>
     <li><a href="mariadb/" title="mariadb"><span class="symbol module"></span>mariadb</a></li>
     <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
+    <li><a href="media/" title="media"><span class="symbol module"></span>media</a></li>
     <li><a href="mediaservices/" title="mediaservices"><span class="symbol module"></span>mediaservices</a></li>
     <li><a href="mixedreality/" title="mixedreality"><span class="symbol module"></span>mixedreality</a></li>
     <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
@@ -81,6 +93,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="privatedns/" title="privatedns"><span class="symbol module"></span>privatedns</a></li>
     <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
     <li><a href="proximity/" title="proximity"><span class="symbol module"></span>proximity</a></li>
+    <li><a href="purview/" title="purview"><span class="symbol module"></span>purview</a></li>
     <li><a href="recoveryservices/" title="recoveryservices"><span class="symbol module"></span>recoveryservices</a></li>
     <li><a href="redis/" title="redis"><span class="symbol module"></span>redis</a></li>
     <li><a href="relay/" title="relay"><span class="symbol module"></span>relay</a></li>
@@ -93,8 +106,10 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="signalr/" title="signalr"><span class="symbol module"></span>signalr</a></li>
     <li><a href="siterecovery/" title="siterecovery"><span class="symbol module"></span>siterecovery</a></li>
     <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
+    <li><a href="stack/" title="stack"><span class="symbol module"></span>stack</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
+    <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
     <li><a href="trafficmanager/" title="trafficmanager"><span class="symbol module"></span>trafficmanager</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
 </ul>
@@ -111,26 +126,8 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.9.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.html" title="Pulumi.Azure">Pulumi.Azure</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#" title="azure">azure</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/#" title="@pulumi/azure">@pulumi/azure</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure" title="pulumi_azure">pulumi_azure</a></dd>
-
+	<dd>4.10.0</dd>
 </dl>
 

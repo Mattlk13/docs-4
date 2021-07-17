@@ -1,6 +1,6 @@
 ---
 title: "f5 BIG-IP"
-title_tag: "Package f5 BIG-IP"
+title_tag: "f5 BIG-IP Package"
 meta_desc: "A Pulumi package for creating and managing F5 BigIP resources."
 menu:
     reference:
@@ -24,8 +24,18 @@ A Pulumi package for creating and managing F5 BigIP resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="as3" title="As3"><span class="symbol resource"></span>As3</a></li>
+    <li><a href="bigiqas3" title="BigIqAs3"><span class="symbol resource"></span>BigIqAs3</a></li>
+    <li><a href="command" title="Command"><span class="symbol resource"></span>Command</a></li>
+    <li><a href="commonlicensemanagebigiq" title="CommonLicenseManageBigIq"><span class="symbol resource"></span>CommonLicenseManageBigIq</a></li>
     <li><a href="do" title="Do"><span class="symbol resource"></span>Do</a></li>
+    <li><a href="eventservicediscovery" title="EventServiceDiscovery"><span class="symbol resource"></span>EventServiceDiscovery</a></li>
+    <li><a href="fastapplication" title="FastApplication"><span class="symbol resource"></span>FastApplication</a></li>
+    <li><a href="fasttemplate" title="FastTemplate"><span class="symbol resource"></span>FastTemplate</a></li>
+    <li><a href="ipsecpolicy" title="IpsecPolicy"><span class="symbol resource"></span>IpsecPolicy</a></li>
+    <li><a href="netikepeer" title="NetIkePeer"><span class="symbol resource"></span>NetIkePeer</a></li>
+    <li><a href="nettunnel" title="NetTunnel"><span class="symbol resource"></span>NetTunnel</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="trafficselector" title="TrafficSelector"><span class="symbol resource"></span>TrafficSelector</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,26 +45,8 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.html" title="Pulumi.F5BigIP">Pulumi.F5BigIP</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#" title="f5bigip">f5bigip</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#" title="@pulumi/f5bigip">@pulumi/f5bigip</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_f5bigip" title="pulumi_f5bigip">pulumi_f5bigip</a></dd>
-
+	<dd>3.3.0</dd>
 </dl>
 

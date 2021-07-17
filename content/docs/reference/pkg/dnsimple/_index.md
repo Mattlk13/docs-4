@@ -1,6 +1,6 @@
 ---
 title: "DNSimple"
-title_tag: "Module DNSimple | Package DNSimple"
+title_tag: "dnsimple.DNSimple"
 meta_desc: "A Pulumi package for creating and managing dnsimple cloud resources."
 menu:
     reference:
@@ -14,6 +14,7 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="emailforward" title="EmailForward"><span class="symbol resource"></span>EmailForward</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
 </ul>
@@ -25,26 +26,8 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/dnsimple/terraform-provider-dnsimple).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.DNSimple/Pulumi.DNSimple.html" title="Pulumi.DNSimple">Pulumi.DNSimple</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple/?tab=doc#" title="dnsimple">dnsimple</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/dnsimple/#" title="@pulumi/dnsimple">@pulumi/dnsimple</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_dnsimple" title="pulumi_dnsimple">pulumi_dnsimple</a></dd>
-
+	<dd>3.2.0</dd>
 </dl>
 

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class InputJson
    ">
-    <meta name="generator" content="docfx 2.51.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -37,8 +37,7 @@
               </button>
               <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
                 <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
-              </a>
-            </div>
+              </a>    </div>
             <div class="collapse navbar-collapse" id="navbar">
               <form class="navbar-form navbar-right" role="search" id="search">
                 <div class="form-group">
@@ -71,13 +70,13 @@
   
   <h1 id="Pulumi_InputJson" data-uid="Pulumi.InputJson" class="text-break">Class InputJson
   </h1>
-  <div class="markdown level0 summary"><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <see cref="!:JsonElement"></see>.</p>
+  <div class="markdown level0 summary"><p>Represents an <a class="xref" href="Pulumi.Input-1.html">Input&lt;T&gt;</a> value that wraps a <span class="xref">System.Text.Json.JsonElement</span>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">JsonElement</span>&gt;</div>
+    <div class="level1"><a class="xref" href="Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Text.Json.JsonElement</span>&gt;</div>
     <div class="level2"><span class="xref">InputJson</span></div>
   </div>
   <div class="inheritedMembers">
@@ -126,15 +125,15 @@
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L26">View Source</a>
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L32">View Source</a>
   </span>
   <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
-  <h4 id="Pulumi_InputJson_op_Implicit_JsonDocument__Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(JsonDocument)~Pulumi.InputJson">Implicit(JsonDocument to InputJson)</h4>
+  <h4 id="Pulumi_InputJson_op_Implicit_Pulumi_Output_System_String___Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(Pulumi.Output{System.String})~Pulumi.InputJson">Implicit(Output&lt;String&gt; to InputJson)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputJson(JsonDocument document)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator InputJson(Output&lt;string&gt; json)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,51 +146,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JsonDocument</span></td>
-        <td><span class="parametername">document</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputJson.html">InputJson</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L29">View Source</a>
-  </span>
-  <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
-  <h4 id="Pulumi_InputJson_op_Implicit_JsonElement__Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(JsonElement)~Pulumi.InputJson">Implicit(JsonElement to InputJson)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputJson(JsonElement element)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">JsonElement</span></td>
-        <td><span class="parametername">element</span></td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">json</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +171,7 @@
     <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L35">View Source</a>
   </span>
   <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
-  <h4 id="Pulumi_InputJson_op_Implicit_Pulumi_Output_JsonDocument___Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(Pulumi.Output{JsonDocument})~Pulumi.InputJson">Implicit(Output&lt;JsonDocument&gt; to InputJson)</h4>
+  <h4 id="Pulumi_InputJson_op_Implicit_Pulumi_Output_System_Text_Json_JsonDocument___Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(Pulumi.Output{System.Text.Json.JsonDocument})~Pulumi.InputJson">Implicit(Output&lt;JsonDocument&gt; to InputJson)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -233,7 +189,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">JsonDocument</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Text.Json.JsonDocument</span>&gt;</td>
         <td><span class="parametername">document</span></td>
         <td></td>
       </tr>
@@ -258,7 +214,7 @@
     <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
-  <h4 id="Pulumi_InputJson_op_Implicit_Pulumi_Output_JsonElement___Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(Pulumi.Output{JsonElement})~Pulumi.InputJson">Implicit(Output&lt;JsonElement&gt; to InputJson)</h4>
+  <h4 id="Pulumi_InputJson_op_Implicit_Pulumi_Output_System_Text_Json_JsonElement___Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(Pulumi.Output{System.Text.Json.JsonElement})~Pulumi.InputJson">Implicit(Output&lt;JsonElement&gt; to InputJson)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -276,51 +232,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">JsonElement</span>&gt;</td>
+        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Text.Json.JsonElement</span>&gt;</td>
         <td><span class="parametername">element</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.InputJson.html">InputJson</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L32">View Source</a>
-  </span>
-  <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
-  <h4 id="Pulumi_InputJson_op_Implicit_Pulumi_Output_System_String___Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(Pulumi.Output{System.String})~Pulumi.InputJson">Implicit(Output&lt;String&gt; to InputJson)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator InputJson(Output&lt;string&gt; json)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">json</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -383,6 +296,92 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L26">View Source</a>
+  </span>
+  <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
+  <h4 id="Pulumi_InputJson_op_Implicit_System_Text_Json_JsonDocument__Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(System.Text.Json.JsonDocument)~Pulumi.InputJson">Implicit(JsonDocument to InputJson)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputJson(JsonDocument document)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Text.Json.JsonDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputJson.html">InputJson</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi/blob/master/sdk/dotnet/Pulumi/Core/InputJson.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_InputJson_op_Implicit_" data-uid="Pulumi.InputJson.op_Implicit*"></a>
+  <h4 id="Pulumi_InputJson_op_Implicit_System_Text_Json_JsonElement__Pulumi_InputJson" data-uid="Pulumi.InputJson.op_Implicit(System.Text.Json.JsonElement)~Pulumi.InputJson">Implicit(JsonElement to InputJson)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator InputJson(JsonElement element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Text.Json.JsonElement</span></td>
+        <td><span class="parametername">element</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.InputJson.html">InputJson</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Pulumi.InputExtensions.html#Pulumi_InputExtensions_Apply__2_Pulumi_Input___0__System_Func___0___1__">InputExtensions.Apply&lt;T, U&gt;(Input&lt;T&gt;, Func&lt;T, U&gt;)</a>
@@ -414,8 +413,7 @@
               <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
       
       <footer>
@@ -425,7 +423,7 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2016-2020, Pulumi Corporation.
+            Copyright 2016-2021, Pulumi Corporation.
             
           </div>
         </div>
