@@ -346,7 +346,7 @@ var component = new MyResource("...",
 
 If a component resource is itself a child of another component resource, its set of providers is inherited from its parent by default.
 
-## Add Multi-language Support
+## Adding Multi-language Support
 
 By default, components are authored and consumed in the same programming language by extending the `ComponentResource` class. The class can then be imported or referenced using the language's applicable pattern. To support consuming components in other languages, Pulumi can introspect your component class and generate the necessary SDKs. To support multi-language consumption, a couple additional steps are required.
 
@@ -424,25 +424,32 @@ if __name__ == "__main__":
 1. Define a `main.go` file
 2. Declare an instance of `NewProviderBuilder`,  passing in a name, namespace and the components being built
 
+{{% notes type="info" %}}
+The code below uses the new pulumi-go-provider v1 APIs. Make sure you are using the latest version of `github.com/pulumi/pulumi-go-provider`.
+{{% /notes %}}
+
 ```go
 package main
 
 import (
+    "context"
+    "log"
+
     "github.com/pulumi/pulumi-go-provider/infer"
 )
 
 func main() {
-    err := infer.NewProviderBuilder().
-            WithName("go-components").
+    prov, err := infer.NewProviderBuilder().
             WithNamespace("your-org-name").
             WithComponents(
-                infer.Component(MyComponent),
+                infer.ComponentF(MyComponent),
             ).
-            BuildAndRun()
-
+            Build()
     if err != nil {
-        panic(err)
+        log.Fatal(err.Error())
     }
+
+    _ = prov.Run(context.Background(), "go-components", "v0.0.1")
 }
 ```
 
@@ -488,9 +495,13 @@ public class App {
 
 ### Publishing the Component
 
-Once a component is authored, it can be pushed to a git repo and consumed remotely; or, in situations like monorepos, the component can be referenced locally.
+Once a component is authored, it can be published to the [IDP Private Registry](/docs/idp/get-started/private-registry/) or consumed directly from a git repo.
 
-#### Git Consumption
+#### Private Registry Publishing
+
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like components and templates -- the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/pulumi-cloud/developer-portals/templates/) that power golden path workflows in Pulumi. To learn more about publishing packages to the private registry, check out the [Pulumi Private Registry guide](/idp/get-started/private-registry/).
+
+#### Consumption
 
 In the consuming Pulumi application, add the component as a dependency.
 
