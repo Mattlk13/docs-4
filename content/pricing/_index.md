@@ -269,18 +269,39 @@ comparison_table:
                     - content: _blank
                     - content: _check
                     - content: _check
-                - title: Integrations - Dynamic credentials
+                - title: Dynamic credentials
                   link: /docs/esc/integrations/dynamic-login-credentials/
                   items:
                     - content: _check
                     - content: _check
                     - content: _check
                     - content: _check
-                - title: Integrations - Dynamic secrets
+                - title: Dynamic secrets
                   link: /docs/esc/integrations/dynamic-secrets/
                   items:
                     - content: _check
                     - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Rotated secrets
+                  link: /docs/esc/integrations/rotated-secrets/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Database Secrets Rotation
+                  link: /blog/esc-db-secrets-rotation-launch/
+                  items:
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                    - content: _check
+                - title: Database Secrets Rotation in private networks
+                  link: /blog/esc-db-secrets-rotation-launch/
+                  items:
+                    - content: _blank
+                    - content: _blank
                     - content: _check
                     - content: _check
                 - title: Integrations - Sync
@@ -326,12 +347,6 @@ comparison_table:
                     - content: 1
                     - content: 10
                     - content: 20
-                - title: Per query limits in UI
-                  items:
-                    - content: _blank
-                    - content: 2K results
-                    - content: 10K results
-                    - content: 10K results
                 - title: Data export
                   link: /docs/insights/#data-export
                   items:
@@ -343,7 +358,7 @@ comparison_table:
                   link: /docs/insights/search/#property-queries
                   items:
                     - content: _blank
-                    - content: _blank
+                    - content: _check
                     - content: _check
                     - content: _check
                 - title: Policy enforcement
