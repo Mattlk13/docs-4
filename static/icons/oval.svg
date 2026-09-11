@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>icons/oval</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="icons/oval" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" fill="#2FC89F" cx="5" cy="5" r="5"></circle>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" version="1.1" viewBox="0 0 10 10"><title>icons/oval</title><desc>Created with Sketch.</desc><g id="icons/oval" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><circle id="Oval" cx="5" cy="5" r="5" fill="#2FC89F"/></g></svg>
